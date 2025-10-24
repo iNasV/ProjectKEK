@@ -1,0 +1,28 @@
+2025/10/23 22:58:25 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:00:32 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:06:38 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:13:43 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:14:50 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:16:59 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:17:28 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:23:01 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:23:06 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:36:47 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:39:50 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:41:30 [emerg] 1#1: host not found in upstream "BIBA:8080" in /etc/nginx/nginx.conf:20
+2025/10/23 23:56:46 [error] 29#29: *1 "/etc/nginx/html/index.html" is not found (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2025/10/23 23:56:46 [error] 29#29: *1 open() "/etc/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2025/10/23 23:56:48 [error] 29#29: *1 "/etc/nginx/html/index.html" is not found (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2025/10/23 23:57:12 [error] 29#29: *1 connect() failed (113: No route to host) while connecting to upstream, client: 192.168.65.1, server: localhost, request: "GET /boba/ HTTP/1.1", upstream: "http://172.21.0.3:8080/", host: "localhost"
+2025/10/24 00:05:46 [error] 29#29: *9 open() "/etc/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2025/10/24 00:07:49 [error] 29#29: *14 "/etc/nginx/html/index.html" is not found (2: No such file or directory), client: 192.168.65.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2025/10/24 00:15:43 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:11
+2025/10/24 00:15:52 [error] 29#29: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.65.1, server: localhost, request: "GET /biba/ HTTP/1.1", upstream: "http://172.20.0.3:8080/", host: "localhost"
+2025/10/24 01:12:32 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:11
+2025/10/24 13:45:43 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:11
+2025/10/24 13:59:06 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:11
+2025/10/24 14:09:03 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:11
+2025/10/24 14:09:15 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:11
+2025/10/24 14:17:06 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:11
+2025/10/24 14:37:00 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:11
+2025/10/24 16:38:40 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:11
