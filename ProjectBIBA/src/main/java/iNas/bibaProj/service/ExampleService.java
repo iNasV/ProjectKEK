@@ -1,6 +1,6 @@
-package iNas.service;
+package iNas.bibaProj.service;
 
-import iNas.entity.Example;
+import iNas.bibaProj.entity.Example;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package iNas.service;
+package iNas.bibaProj.service;
 
 import iNas.responses.BibaResponse;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 @Service

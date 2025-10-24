@@ -1,8 +1,8 @@
-package iNas.controller.impl;
+package iNas.bibaProj.controller.impl;
 
-import iNas.controller.ExampleController;
-import iNas.entity.Example;
-import iNas.service.ExampleService;
+import iNas.bibaProj.controller.ExampleController;
+import iNas.bibaProj.entity.Example;
+import iNas.bibaProj.service.ExampleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;

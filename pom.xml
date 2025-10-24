@@ -4,9 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>iNas</groupId>
-    <artifactId>ProjectBIBA</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.projectkek</groupId>
+    <artifactId>ProjectKEK</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
+    <modules>
+        <module>ProjectBIBA</module>
+        <module>ProjectBOBA</module>
+        <module>ProjectUnknown</module>
+    </modules>
 
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+
+    </dependencyManagement>
 </project>

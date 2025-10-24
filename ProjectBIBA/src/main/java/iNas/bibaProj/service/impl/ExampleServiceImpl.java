@@ -1,8 +1,8 @@
-package iNas.service.impl;
+package iNas.bibaProj.service.impl;
 
-import iNas.entity.Example;
-import iNas.repository.ExampleRepository;
-import iNas.service.ExampleService;
+import iNas.bibaProj.entity.Example;
+import iNas.bibaProj.repository.ExampleRepository;
+import iNas.bibaProj.service.ExampleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

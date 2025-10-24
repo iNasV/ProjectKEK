@@ -1,6 +1,6 @@
-package iNas.controller;
+package iNas.bibaProj.controller;
 
-import iNas.entity.Example;
+import iNas.bibaProj.entity.Example;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

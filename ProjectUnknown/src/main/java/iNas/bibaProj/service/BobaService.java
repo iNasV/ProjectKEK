@@ -1,6 +1,5 @@
-package iNas.service;
+package iNas.bibaProj.service;
 
-import iNas.responses.BibaResponse;
 import iNas.responses.BobaResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.core.ParameterizedTypeReference;

@@ -1,0 +1,6 @@
+.openapi-generator-ignore
+README.md
+pom.xml
+src/main/java/iNas/generated/api/ApiUtil.java
+src/main/java/iNas/generated/api/ExampleBobaApi.java
+src/main/java/iNas/generated/model/ExampleBoba.java

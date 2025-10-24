@@ -1,6 +1,6 @@
-package iNas.repository;
+package iNas.bibaProj.repository;
 
-import iNas.entity.Example;
+import iNas.bibaProj.entity.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
