@@ -1,11 +1,11 @@
-package iNas.responses;
+package iNas.unknownProj.responses;
 
 import lombok.Data;
 
 import java.util.UUID;
 
 @Data
-public class BobaResponse {
+public class BibaResponse {
     private UUID id;
     private String name;
 }
