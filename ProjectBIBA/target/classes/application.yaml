@@ -1,7 +1,10 @@
 server:
-  port: 8080
+  port: 7777
 
 spring:
+  application:
+    name: biba-JPA
+
   datasource:
     url: jdbc:postgresql://postgres:5432/ProjectKEK
     username: admin
@@ -15,3 +18,55 @@ spring:
         format_sql: true
         show_sql: true
     open-in-view: false
+
+  kafka:
+    bootstrap-servers: kafka1:9092,kafka2:9093,kafka3:9094
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+    properties:
+      schema.registry.url: http://schema-registry:8081
+#      auto.register.schemas: true
+#      specific.avro.reader: true
+#      value.subject.name.strategy: io.confluent.kafka.serializers.subject.RecordNameStrategy
+
+event:
+  topic: events
+  generation:
+    interval-ms: 10000
+
+management:
+#  tracing:
+#    sampling:
+#      probability: 1.0
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#        include: health,info,metrics,prometheus,trace
+#  metrics:
+#    export:
+#      prometheus:
+#        enabled: true
+#  endpoint:
+#    prometheus:
+#      enabled: true
+#    trace:
+#      enabled: true
+#
+#otel:
+#  service:
+#    name: ${spring.application.name}
+#  exporter:
+#    jaeger:
+#      endpoint: http://jaeger:14250
+#  traces:
+#    exporter: jaeger
+#
+logging:
+#  config: classpath:logback-spring.xml
+  level:
+    org.jboss.logging: WARN
+    root: info
+#    io.opentelemetry: DEBUG
+#    com.projectkek: DEBUG

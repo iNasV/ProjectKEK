@@ -1,8 +1,15 @@
-C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\App.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\config\OpenApiConfig.java
+C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\config\TracingConfig.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\controller\ExampleController.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\controller\impl\ExampleControllerImpl.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\entity\Example.java
+C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\kafka\event\Event.java
+C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\kafka\producer\EventProducer.java
+C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\kafka\producer\ExampleEventProducer.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\repository\ExampleRepository.java
+C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\Runner.java
+C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\service\ExampleScheduledService.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\service\ExampleService.java
+C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\service\impl\ExampleScheduledServiceImpl.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\service\impl\ExampleServiceImpl.java
+C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\service\impl\TraceService.java

@@ -1,9 +1,10 @@
-iNas\App.class
 iNas\generated\api\ExampleBobaApi.class
-iNas\entity\ExampleBobaEntity.class
-iNas\controller\impl\ExampleBobaApiImpl.class
+iNas\metrics\TraceService.class
 iNas\generated\api\ApiUtil.class
 iNas\generated\model\ExampleBoba.class
 iNas\service\impl\ExampleBobaServiceImpl.class
-iNas\repository\ExampleBobaRepository.class
 iNas\service\ExampleBobaService.class
+iNas\App.class
+iNas\entity\ExampleBobaEntity.class
+iNas\controller\impl\ExampleBobaApiImpl.class
+iNas\repository\ExampleBobaRepository.class
