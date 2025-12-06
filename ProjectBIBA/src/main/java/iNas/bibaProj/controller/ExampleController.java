@@ -7,7 +7,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -21,4 +23,11 @@ public interface ExampleController {
             @ApiResponse(responseCode = "200", description = "Успех")
     })
     ResponseEntity<List<Example>> getAllExample();
+
+    @PostMapping("/")
+    @Operation(summary = "Метод создания example")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "OK")
+    })
+    ResponseEntity<Example> saveExample(@RequestParam String description);
 }

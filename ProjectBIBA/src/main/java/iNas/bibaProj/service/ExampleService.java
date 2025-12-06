@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface ExampleService {
     List<Example> findAllExample();
+    Example saveExample(String description);
 }
