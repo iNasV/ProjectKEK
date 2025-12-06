@@ -1,7 +1,7 @@
 services:
   nginx:
-    container_name: nginx
     image: nginx
+    container_name: nginx
     networks:
       - network1
       - network2
@@ -13,54 +13,281 @@ services:
       - ./nginx/snippets/:/etc/nginx/snippets/
       # Логи
       - ./logs:/var/log/nginx
-    depends_on:
-      - postgres
-      - BIBA
-      - BOBA
 
   postgres:
     image: postgres:15
-    container_name: postgresPKEK
+    container_name: postgres
     environment:
       POSTGRES_DB: ProjectKEK
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: '****'
     ports:
       - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U admin -d ProjectKEK"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
       - network1
 
-  BIBA:
-    container_name: BIBA
+  postgres-exporter:
+    image: prometheuscommunity/postgres-exporter
+    container_name: postgres-exporter
+    ports:
+      - "9187:9187"
+    environment:
+      DATA_SOURCE_NAME: "postgresql://admin:****@postgres:5432/ProjectKEK?sslmode=disable"
+    healthcheck:
+      test: ["CMD","wget","--spider","-q","http://localhost:9187/metrics"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - network1
+
+
+  biba:
+    image: biba-image
+    container_name: biba
     build:
       context: ./ProjectBIBA
       dockerfile: Dockerfile
-    image: biba-image
-    environment:
-      SPRING_PROFILES_ACTIVE: docker
     networks:
       - network1
     ports:
-      - "8081:8080"
+      - "7777:7777"
     depends_on:
-      - postgres
+      kafka1:
+        condition: service_healthy
+      kafka2:
+        condition: service_healthy
+      kafka3:
+        condition: service_healthy
+      schema-registry:
+        condition: service_healthy
 
-  BOBA:
-    container_name: BOBA
-    build:
-      context: ./ProjectBOBA
-      dockerfile: Dockerfile
-    image: boba-image
-    environment:
-      SPRING_PROFILES_ACTIVE: docker
+#  boba:
+#    container_name: boba
+#    build:
+#      context: ./ProjectBOBA
+#    image: boba-image
+#    networks:
+#      - network1
+#    ports:
+#      - "8082:8080"
+#    depends_on:
+#      - postgres
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
     networks:
       - network1
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.enable-lifecycle'
+    healthcheck:
+      test: ["CMD","wget","--spider","-q","http://localhost:9090/-/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
     ports:
-      - "8082:8080"
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/dashboards:/etc/grafana/provisioning/dashboards
+    networks:
+      - network1
+    healthcheck:
+      test: ["CMD","wget","--spider","-q","http://localhost:3000/api/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     depends_on:
-      - postgres
+      prometheus:
+        condition: service_healthy
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    healthcheck:
+      test: ["CMD","echo","ruok","|","nc","localhost","2181","|","grep","imok"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - network1
+
+  kafka1:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka1
+    hostname: kafka1
+    ports:
+      - "9092:9092"
+    volumes:
+      - kafka1_data:/var/lib/kafka/data
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    healthcheck:
+      test: [ "CMD", "kafka-topics", "--bootstrap-server", "localhost:9092", "--list" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+    networks:
+      - network1
+
+  kafka2:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka2
+    hostname: kafka2
+    ports:
+      - "9093:9093"
+    volumes:
+      - kafka2_data:/var/lib/kafka/data
+    environment:
+      KAFKA_BROKER_ID: 2
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    healthcheck:
+      test: [ "CMD", "kafka-topics", "--bootstrap-server", "localhost:9093", "--list" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+    networks:
+      - network1
+
+  kafka3:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka3
+    hostname: kafka3
+    ports:
+      - "9094:9094"
+    volumes:
+      - kafka3_data:/var/lib/kafka/data
+    environment:
+      KAFKA_BROKER_ID: 3
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka3:9094
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    healthcheck:
+      test: [ "CMD", "kafka-topics", "--bootstrap-server", "localhost:9094", "--list" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+    networks:
+      - network1
+
+  schema-registry:
+    image: confluentinc/cp-schema-registry:7.5.0
+    container_name: schema-registry
+    ports:
+      - "8081:8081"
+    volumes:
+      - schema_registry_data:/etc/schema-registry
+    environment:
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: PLAINTEXT://kafka1:9092
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+    depends_on:
+      kafka1:
+        condition: service_healthy
+      zookeeper:
+        condition: service_healthy
+    networks:
+      - network1
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8081/subjects" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui
+    ports:
+      - "8070:8080"
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=local
+      - KAFKA_CLUSTERS_0_BOOTSTRAP_SERVERS=kafka1:9092,kafka2:9093,kafka3:9094
+      - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper:2181
+      - KAFKA_CLUSTERS_0_SCHEMAREGISTRY=http://schema-registry:8081
+    depends_on:
+      kafka1:
+        condition: service_healthy
+      kafka2:
+        condition: service_healthy
+      kafka3:
+        condition: service_healthy
+      schema-registry:
+        condition: service_healthy
+    networks:
+      - network1
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "-q", "http://localhost:8080" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  kafka-exporter:
+    image: danielqsj/kafka-exporter
+    container_name: kafka-exporter
+    ports:
+      - "9308:9308"
+    restart: unless-stopped
+    command:
+      - "--kafka.server=kafka1:9092"
+      - "--kafka.server=kafka2:9093"
+      - "--kafka.server=kafka3:9094"
+    healthcheck:
+      test: ["CMD","wget","--spider","-q","http://localhost:9308/metrics"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+#    depends_on:
+#      kafka1:
+#        condition: service_healthy
+#      kafka2:
+#        condition: service_healthy
+#      kafka3:
+#        condition: service_healthy
+    networks:
+      - network1
 
 networks:
   network1:
@@ -70,3 +297,9 @@ networks:
 
 volumes:
   postgres_data:
+  prometheus_data:
+  grafana_data:
+  kafka1_data:
+  kafka2_data:
+  kafka3_data:
+  schema_registry_data:

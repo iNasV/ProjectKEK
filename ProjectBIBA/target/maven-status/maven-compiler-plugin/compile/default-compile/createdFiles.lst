@@ -1,8 +1,9 @@
 iNas\bibaProj\repository\ExampleRepository.class
 iNas\bibaProj\controller\impl\ExampleControllerImpl.class
-iNas\bibaProj\App.class
 iNas\bibaProj\service\ExampleService.class
 iNas\bibaProj\service\impl\ExampleServiceImpl.class
+iNas\bibaProj\entity\Example$ExampleBuilder.class
 iNas\bibaProj\entity\Example.class
+iNas\bibaProj\Runner.class
 iNas\bibaProj\config\OpenApiConfig.class
 iNas\bibaProj\controller\ExampleController.class

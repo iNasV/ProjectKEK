@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.Optional;
 import jakarta.annotation.Generated;
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-10-24T19:33:10.968376+03:00[Europe/Moscow]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-11-22T12:07:37.858130+03:00[Europe/Moscow]")
 @Validated
 @Tag(name = "ExampleBOBA", description = "the ExampleBOBA API")
 public interface ExampleBobaApi {
