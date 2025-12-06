@@ -24,7 +24,6 @@ public interface ExampleController {
     })
     ResponseEntity<List<Example>> getAllExample();
 
-
     @PostMapping("/")
     @Operation(summary = "Метод создания example")
     @ApiResponses(value = {
