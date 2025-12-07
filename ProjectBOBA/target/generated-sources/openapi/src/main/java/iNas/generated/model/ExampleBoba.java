@@ -19,7 +19,7 @@ import jakarta.annotation.Generated;
  * ExampleBoba
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-11-22T12:07:37.858130+03:00[Europe/Moscow]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-12-07T15:29:33.105843800+03:00[Europe/Moscow]")
 public class ExampleBoba {
 
   private UUID id;

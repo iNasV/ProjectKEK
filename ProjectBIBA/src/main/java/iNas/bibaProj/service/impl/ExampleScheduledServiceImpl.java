@@ -1,22 +1,29 @@
-//package iNas.bibaProj.service.impl;
-//
-//import iNas.bibaProj.kafka.event.Event;
-//import iNas.bibaProj.kafka.producer.EventProducer;
-//import iNas.bibaProj.service.ExampleScheduledService;
-//import lombok.RequiredArgsConstructor;
-//import org.springframework.stereotype.Service;
-//
-//@Service
-//@RequiredArgsConstructor
-//public class ExampleScheduledServiceImpl implements ExampleScheduledService {
-//    private final EventProducer<Event> producer;
-//
-//    @Override
-//    public void sendEvent() {
-//        Event event = Event.newBuilder()
-//                .setUuid("00000000-test-test-test-000000000000")
-//                .setSubject("Subject")
-//                .setDescription("Description").build();
-//        producer.produce(event);
-//    }
-//}
+package iNas.bibaProj.service.impl;
+
+import iNas.bibaProj.kafka.event.Event;
+import iNas.bibaProj.kafka.producer.EventProducer;
+import iNas.bibaProj.service.ExampleScheduledService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
+
+import java.util.UUID;
+
+@Service
+@Slf4j
+@RequiredArgsConstructor
+public class ExampleScheduledServiceImpl implements ExampleScheduledService {
+    private final EventProducer<Event> producer;
+
+    @Override
+    @Scheduled(fixedRateString = "${event.generation.interval-ms}")
+    public void sendEvent() {
+        Event event = Event.newBuilder()
+                .setUuid(UUID.randomUUID().toString())
+                .setSubject("Subject")
+                .setDescription("Description").build();
+        log.info("Планируется продюссирование события {}", event.getUuid());
+        producer.produce(event);
+    }
+}

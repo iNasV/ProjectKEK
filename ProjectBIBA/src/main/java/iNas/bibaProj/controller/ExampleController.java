@@ -29,5 +29,5 @@ public interface ExampleController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "OK")
     })
-    ResponseEntity<Example> saveExample(@RequestParam String description);
+    ResponseEntity<Example> saveExample(@RequestParam("p1") String description);
 }

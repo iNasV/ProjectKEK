@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @Slf4j
 @SpringBootApplication
-//@EnableScheduling
+@EnableScheduling
 public class Runner {
     public static void main(String[] args) {
         SpringApplication.run(Runner.class,args);
@@ -18,6 +18,5 @@ public class Runner {
     @EventListener(ContextRefreshedEvent.class)
     public void onStartup() {
         log.info("Старт");
-        System.out.println("Старт");
     }
 }
