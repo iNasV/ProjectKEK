@@ -1,0 +1,28 @@
+server:
+  port: 7778
+
+spring:
+  application:
+    name: boba-JDBC
+
+  datasource:
+    url: jdbc:postgresql://postgres:5432/ProjectKEK
+    username: admin
+    password: '****'
+
+  kafka:
+    bootstrap-servers: kafka1:9092
+    #    ,kafka2:9093,kafka3:9094
+    consumer:
+      group-id: event-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+    properties:
+      schema.registry.url: http://schema-registry:8081
+      specific.avro.reader: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

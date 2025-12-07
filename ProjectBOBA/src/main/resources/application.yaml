@@ -10,20 +10,13 @@ spring:
     username: admin
     password: '****'
 
-  jdbc:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        format_sql: true
-        show_sql: true
-    open-in-view: false
-
   kafka:
     bootstrap-servers: kafka1:9092
     #    ,kafka2:9093,kafka3:9094
     consumer:
       group-id: event-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
     properties:
       schema.registry.url: http://schema-registry:8081
       specific.avro.reader: true
