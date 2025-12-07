@@ -3,16 +3,10 @@ package iNas.bibaProj.controller.impl;
 import iNas.bibaProj.controller.ExampleController;
 import iNas.bibaProj.entity.Example;
 import iNas.bibaProj.service.ExampleService;
-import io.micrometer.core.instrument.MeterRegistry;
-//import io.micrometer.tracing.annotation.NewSpan;
-//import iNas.bibaProj.service.impl.TraceService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 

@@ -1,0 +1,54 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<configuration>-->
+<!--    <springProperty scope="context" name="appName" source="spring.application.name"/>-->
+
+<!--    &lt;!&ndash; Включаем MDC для traceId &ndash;&gt;-->
+<!--    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>-->
+
+<!--&lt;!&ndash;    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">&ndash;&gt;-->
+<!--&lt;!&ndash;        <destination>logstash:5044</destination>&ndash;&gt;-->
+<!--&lt;!&ndash;        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">&ndash;&gt;-->
+<!--&lt;!&ndash;            <providers>&ndash;&gt;-->
+<!--&lt;!&ndash;                <timestamp>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <timeZone>UTC</timeZone>&ndash;&gt;-->
+<!--&lt;!&ndash;                </timestamp>&ndash;&gt;-->
+<!--&lt;!&ndash;                <logLevel/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <loggerName/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <message/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <mdc>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <includeMdcKeyName>traceId</includeMdcKeyName>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <includeMdcKeyName>spanId</includeMdcKeyName>&ndash;&gt;-->
+<!--&lt;!&ndash;                </mdc>&ndash;&gt;-->
+<!--&lt;!&ndash;                <stackTrace>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <maxDepthPerThrowable>30</maxDepthPerThrowable>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <maxLength>2048</maxLength>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <shortenedClassNameLength>20</shortenedClassNameLength>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <rootCauseFirst>true</rootCauseFirst>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </throwableConverter>&ndash;&gt;-->
+<!--&lt;!&ndash;                </stackTrace>&ndash;&gt;-->
+<!--&lt;!&ndash;                <pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;                        {&ndash;&gt;-->
+<!--&lt;!&ndash;                        "app": "${appName}",&ndash;&gt;-->
+<!--&lt;!&ndash;                        "thread": "%thread",&ndash;&gt;-->
+<!--&lt;!&ndash;                        "class": "%logger{40}"&ndash;&gt;-->
+<!--&lt;!&ndash;                        }&ndash;&gt;-->
+<!--&lt;!&ndash;                    </pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;                </pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;                <context/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </providers>&ndash;&gt;-->
+<!--&lt;!&ndash;        </encoder>&ndash;&gt;-->
+<!--&lt;!&ndash;    </appender>&ndash;&gt;-->
+
+<!--    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] [%X{traceId:-},%X{spanId:-}] %-5level %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    <root level="INFO">-->
+<!--        <appender-ref ref="LOGSTASH"/>-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </root>-->
+<!--</configuration>-->

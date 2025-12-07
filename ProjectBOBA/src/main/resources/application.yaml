@@ -1,17 +1,35 @@
 server:
-  port: 8080
+  port: 7778
 
 spring:
+  application:
+    name: boba-JDBC
+
   datasource:
     url: jdbc:postgresql://postgres:5432/ProjectKEK
     username: admin
     password: '****'
 
-  jpa:
+  jdbc:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true
         show_sql: true
     open-in-view: false
+
+  kafka:
+    bootstrap-servers: kafka1:9092
+    #    ,kafka2:9093,kafka3:9094
+    consumer:
+      group-id: event-group
+    properties:
+      schema.registry.url: http://schema-registry:8081
+      specific.avro.reader: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

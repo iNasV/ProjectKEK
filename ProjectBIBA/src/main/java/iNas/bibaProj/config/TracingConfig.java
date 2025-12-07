@@ -7,7 +7,6 @@
 //
 //@Configuration
 //public class TracingConfig {
-//
 //    @Bean
 //    public RestTemplate restTemplate(Tracer tracer) {
 //        RestTemplate restTemplate = new RestTemplate();
