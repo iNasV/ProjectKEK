@@ -5,7 +5,7 @@ info:
   description: "описание АПИ Боба!!"
 
 servers:
-  - url: http://localhost:8080
+  - url: http://localhost:7778
     description: Локалка
 
 paths:

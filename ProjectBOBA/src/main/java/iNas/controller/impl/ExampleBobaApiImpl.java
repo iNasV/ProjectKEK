@@ -1,37 +1,30 @@
 package iNas.controller.impl;
 
-import iNas.entity.ExampleBobaEntity;
 import iNas.generated.api.ExampleBobaApi;
 import iNas.generated.model.ExampleBoba;
 import iNas.service.ExampleBobaService;
+import iNas.util.TraceUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
 @RequiredArgsConstructor
 public class ExampleBobaApiImpl implements ExampleBobaApi {
-
-//    private final TraceService traceService;
+    private final TraceUtil traceUtil;
     private final ExampleBobaService exampleBobaService;
 
     @Override
-//    @NewSpan("bobaProcess-inControl")
     public ResponseEntity<List<ExampleBoba>> getAllExampleBoba() {
-        List<ExampleBoba> examples = exampleBobaService.findAllExampleBoba();
+        log.debug("В боба приложении вызвалась ручка получения всех записей: localDateTime = {}", LocalDateTime.now());
 
-//        return traceService.trace("boba-inProcess", ()-> {
-//            logger.info("REQUEST INTO BOBA SERVICE");
-//            return ResponseEntity.ok(examples);
-//        });
+        List<ExampleBoba> examples = traceUtil.trace("inside Boba call", exampleBobaService::findAllExampleBoba);
 
         return ResponseEntity.ok(examples);
     }
-
-
 }

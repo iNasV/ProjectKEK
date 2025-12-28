@@ -4,7 +4,6 @@ C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\entity\Exa
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\exception\GlobalExceptionHandler.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\kafka\consumer\EventListener.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\kafka\consumer\ExampleEventListener.java
-C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\kafka\event\Event.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\kafka\handler\EventHandler.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\kafka\handler\ExampleEventHandler.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\mapper\BobaMapper.java
@@ -13,7 +12,7 @@ C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\repository
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\Runner.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\service\ExampleBobaService.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\service\impl\ExampleBobaServiceImpl.java
-C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\service\impl\TraceService.java
+C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas\util\TraceUtil.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\target\generated-sources\openapi\src\main\java\iNas\generated\api\ApiUtil.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\target\generated-sources\openapi\src\main\java\iNas\generated\api\ExampleBobaApi.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\target\generated-sources\openapi\src\main\java\iNas\generated\model\ExampleBoba.java

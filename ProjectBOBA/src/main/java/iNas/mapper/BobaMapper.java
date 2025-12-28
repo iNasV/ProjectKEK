@@ -4,7 +4,7 @@ import iNas.entity.ExampleBobaEntity;
 import iNas.generated.model.ExampleBoba;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public abstract class BobaMapper {
 
     public abstract ExampleBoba toExampleBoba(ExampleBobaEntity exampleBobaEntity);

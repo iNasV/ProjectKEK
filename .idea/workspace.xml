@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="89c0209a-cd5c-4e76-bd08-d37726feb9d9" name="Changes" comment="0.5 Система наблюдения реализована">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b95b23d9-f57f-4d86-a51f-5d504bf081ad.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b95b23d9-f57f-4d86-a51f-5d504bf081ad/storage_v2/_src_/database/postgres.edMnLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b95b23d9-f57f-4d86-a51f-5d504bf081ad/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b95b23d9-f57f-4d86-a51f-5d504bf081ad/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/b95b23d9-f57f-4d86-a51f-5d504bf081ad/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d132651d-b4b5-41ea-864a-bdc09f348f9a.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d132651d-b4b5-41ea-864a-bdc09f348f9a/storage_v2/_src_/database/ProjectKEK.mDBmAQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d132651d-b4b5-41ea-864a-bdc09f348f9a/storage_v2/_src_/database/ProjectKEK.mDBmAQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d132651d-b4b5-41ea-864a-bdc09f348f9a/storage_v2/_src_/database/ProjectKEK.mDBmAQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/d132651d-b4b5-41ea-864a-bdc09f348f9a/storage_v2/_src_/database/ProjectKEK.mDBmAQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAvro/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAvro/src/main/avro/Event.avsc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAvro/target/ProjectAvro-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAvro/target/classes/com/projectkek/avro/Event$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAvro/target/classes/com/projectkek/avro/Event.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAvro/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAvro/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAvro/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAvro/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectAvro/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/util/TraceUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectBIBA/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectBIBA/target/classes/iNas/bibaProj/config/TracingConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectBIBA/target/classes/iNas/bibaProj/util/TraceUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectBIBA/target/classes/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/util/TraceUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/mapper/BobaMapperImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/util/TraceUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectBOBA/target/generated-sources/annotations/iNas/mapper/BobaMapperImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitoring/alloy/config.alloy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitoring/loki/loki-config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitoring/tempo/tempo.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/src/main/avro/Event.avsc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/config/TracingConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/config/TracingConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/controller/impl/ExampleControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/controller/impl/ExampleControllerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/kafka/event/Event.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/kafka/producer/ExampleEventProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/kafka/producer/ExampleEventProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/service/ExampleScheduledService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/service/ExampleScheduledService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/service/impl/ExampleScheduledServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/service/impl/ExampleScheduledServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/src/main/java/iNas/bibaProj/service/impl/TraceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/target/ProjectBIBA-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/target/ProjectBIBA-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/target/ProjectBIBA-1.0.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/target/ProjectBIBA-1.0.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/target/classes/iNas/bibaProj/controller/impl/ExampleControllerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/target/classes/iNas/bibaProj/controller/impl/ExampleControllerImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/target/classes/iNas/bibaProj/kafka/event/Event$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/target/classes/iNas/bibaProj/kafka/event/Event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/target/classes/iNas/bibaProj/kafka/producer/ExampleEventProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/target/classes/iNas/bibaProj/kafka/producer/ExampleEventProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/target/classes/iNas/bibaProj/service/impl/ExampleScheduledServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/target/classes/iNas/bibaProj/service/impl/ExampleScheduledServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBIBA/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBIBA/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/avro/Event.avsc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/controller/impl/ExampleBobaApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/controller/impl/ExampleBobaApiImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/entity/ExampleBobaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/entity/ExampleBobaEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/kafka/event/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectAvro/target/generated-sources/avro/com/projectkek/avro/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/kafka/handler/ExampleEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/kafka/handler/ExampleEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/mapper/BobaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/mapper/BobaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/repository/ExampleBobaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/repository/ExampleBobaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/service/impl/ExampleBobaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/service/impl/ExampleBobaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/java/iNas/service/impl/TraceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/resources/api/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/resources/api/openapi.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/ProjectBOBA-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/ProjectBOBA-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/ProjectBOBA-1.0.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/ProjectBOBA-1.0.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/api/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/api/openapi.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/controller/impl/ExampleBobaApiImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/controller/impl/ExampleBobaApiImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/entity/ExampleBobaEntity$ExampleBobaEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/entity/ExampleBobaEntity$ExampleBobaEntityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/entity/ExampleBobaEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/entity/ExampleBobaEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/kafka/event/Event$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/kafka/event/Event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/kafka/handler/ExampleEventHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/kafka/handler/ExampleEventHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/mapper/BobaMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/mapper/BobaMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/repository/ExampleBobaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/repository/ExampleBobaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/service/impl/ExampleBobaServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/iNas/service/impl/ExampleBobaServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/classes/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/classes/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/generated-sources/openapi/.openapi-generator/FILES" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/generated-sources/openapi/.openapi-generator/FILES" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/generated-sources/openapi/.openapi-generator/openapi.yaml-default.sha256" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/generated-sources/openapi/.openapi-generator/openapi.yaml-default.sha256" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/generated-sources/openapi/src/main/java/iNas/generated/api/ExampleBobaApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/generated-sources/openapi/src/main/java/iNas/generated/api/ExampleBobaApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/generated-sources/openapi/src/main/java/iNas/generated/model/ExampleBoba.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/generated-sources/openapi/src/main/java/iNas/generated/model/ExampleBoba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectBOBA/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectBOBA/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectKEK.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectUnknown/target/classes/iNas/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectUnknown/target/classes/iNas/unknownProj/config/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectUnknown/target/classes/iNas/unknownProj/feign/BibaClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectUnknown/target/classes/iNas/unknownProj/feign/BobaClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectUnknown/target/classes/iNas/unknownProj/responses/BibaResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectUnknown/target/classes/iNas/unknownProj/responses/BobaResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitoring/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/prometheus.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="AvroIDL_EmptySchema" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;iNasV&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/iNasV/ProjectKEK.git&quot;,
+    &quot;accountId&quot;: &quot;667b67ec-c363-452f-963c-4637692406a9&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="36WKTXbqOH2vx3maKDPZRYzlqxd" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.dc.executor": "Run",
+    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Maven.ProjectBIBA [clean,compile,package].executor": "Run",
+    "Maven.ProjectBIBA [clean,package].executor": "Run",
+    "Maven.ProjectBIBA [clean].executor": "Run",
+    "Maven.ProjectBIBA [compile].executor": "Run",
+    "Maven.ProjectBIBA [package].executor": "Run",
+    "Maven.ProjectBOBA [clean,compile,package].executor": "Run",
+    "Maven.ProjectBOBA [clean,package].executor": "Run",
+    "Maven.ProjectBOBA [clean].executor": "Run",
+    "Maven.ProjectBOBA [compile].executor": "Run",
+    "Maven.ProjectBOBA [package].executor": "Run",
+    "Maven.ProjectKEK [clean,install].executor": "Run",
+    "Maven.ProjectKEK [clean].executor": "Run",
+    "Maven.ProjectKEK [compile].executor": "Run",
+    "Maven.ProjectKEK [install].executor": "Run",
+    "Maven.ProjectKEK [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Runner (1).executor": "Run",
+    "Spring Boot.Runner.executor": "Run",
+    "git-widget-placeholder": "featute/0.5",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/TeeHa/IdeaProjects/sb-starter",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBOBA\src\main\java\iNas" />
+      <recent name="C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\util" />
+      <recent name="C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectAvro" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Runner">
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ProjectUnknown" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="iNas.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Runner (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ProjectBIBA" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="iNas.bibaProj.Runner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iNas.bibaProj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Runner" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ProjectBOBA" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="iNas.Runner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="iNas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="dc" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Runner" />
+        <item itemvalue="Spring Boot.Runner (1)" />
+        <item itemvalue="Docker.docker-compose.yml.postgres: Compose Deployment" />
+        <item itemvalue="Docker.dc" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="89c0209a-cd5c-4e76-bd08-d37726feb9d9" name="Changes" comment="" />
+      <created>1765116896110</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765116896110</updated>
+      <workItem from="1765116897197" duration="4823000" />
+      <workItem from="1765121736005" duration="63000" />
+      <workItem from="1765121820162" duration="11205000" />
+      <workItem from="1765133548312" duration="8702000" />
+      <workItem from="1765389826429" duration="1243000" />
+      <workItem from="1765396842852" duration="2344000" />
+      <workItem from="1765621206342" duration="8000" />
+      <workItem from="1765632451787" duration="7669000" />
+      <workItem from="1765712159457" duration="4277000" />
+      <workItem from="1765724200421" duration="13106000" />
+      <workItem from="1765828015777" duration="3034000" />
+      <workItem from="1765904368339" duration="1263000" />
+      <workItem from="1765911683673" duration="4686000" />
+      <workItem from="1766082644794" duration="3338000" />
+      <workItem from="1766345543977" duration="349000" />
+      <workItem from="1766346114275" duration="2140000" />
+      <workItem from="1766506213339" duration="8783000" />
+      <workItem from="1766603110604" duration="6937000" />
+      <workItem from="1766852757978" duration="3037000" />
+      <workItem from="1766862041867" duration="12517000" />
+      <workItem from="1766878485039" duration="5290000" />
+      <workItem from="1766913639940" duration="5404000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0.5 Система наблюдения реализована" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.5 Система наблюдения реализована" />
+  </component>
+</project>

@@ -1,6 +1,6 @@
 package iNas.bibaProj.service.impl;
 
-import iNas.bibaProj.kafka.event.Event;
+import com.projectkek.avro.Event;
 import iNas.bibaProj.kafka.producer.EventProducer;
 import iNas.bibaProj.service.ExampleScheduledService;
 import lombok.RequiredArgsConstructor;

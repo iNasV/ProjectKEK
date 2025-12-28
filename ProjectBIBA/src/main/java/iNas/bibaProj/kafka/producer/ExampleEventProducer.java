@@ -1,8 +1,9 @@
 package iNas.bibaProj.kafka.producer;
 
-import iNas.bibaProj.kafka.event.Event;
+import com.projectkek.avro.Event;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
@@ -24,6 +25,10 @@ public class ExampleEventProducer implements EventProducer<Event> {
         if (event==null) {
             throw new IllegalArgumentException("Попытка отправить пустое событие в продюсере");
         }
+
+        MDC.put("uid", event.getUuid());
+        MDC.put("subject", event.getSubject());
+        MDC.put("description", event.getDescription());
 
         log.info("Начало отправки события {}", event.getUuid());
         CompletableFuture<SendResult<String,Event>> future = kafkaTemplate.send(topic, event);
