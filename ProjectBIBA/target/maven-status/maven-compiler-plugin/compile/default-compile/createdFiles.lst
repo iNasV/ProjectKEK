@@ -1,10 +1,9 @@
 iNas\bibaProj\exception\GlobalExceptionHandler.class
-iNas\bibaProj\kafka\event\Event$Builder.class
 iNas\bibaProj\service\impl\ExampleScheduledServiceImpl.class
+iNas\bibaProj\config\TracingConfig.class
 iNas\bibaProj\service\ExampleService.class
 iNas\bibaProj\service\impl\ExampleServiceImpl.class
 iNas\bibaProj\entity\Example.class
-iNas\bibaProj\kafka\event\Event.class
 iNas\bibaProj\config\OpenApiConfig.class
 iNas\bibaProj\repository\ExampleRepository.class
 iNas\bibaProj\model\response\HttpErrorResponse.class
@@ -12,6 +11,7 @@ iNas\bibaProj\service\ExampleScheduledService.class
 iNas\bibaProj\controller\impl\ExampleControllerImpl.class
 iNas\bibaProj\entity\Example$ExampleBuilder.class
 iNas\bibaProj\kafka\producer\ExampleEventProducer.class
+iNas\bibaProj\util\TraceUtil.class
 iNas\bibaProj\Runner.class
 iNas\bibaProj\constant\ErrorMessagesConstants.class
 iNas\bibaProj\kafka\producer\EventProducer.class

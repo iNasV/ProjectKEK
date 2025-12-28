@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 @RequiredArgsConstructor
@@ -20,17 +21,17 @@ public class ExampleBobaServiceImpl implements ExampleBobaService {
 
     @Override
     public List<ExampleBoba> findAllExampleBoba() {
-        return exampleBobaRepository.findAllAsList().stream()
-                .map(bobaMapper::toExampleBoba)
-                .collect(Collectors.toList());
+        return StreamSupport.stream(exampleBobaRepository.findAll().spliterator(), false)
+                        .map(bobaMapper::toExampleBoba)
+                        .collect(Collectors.toList());
     }
 
     @Override
     @Transactional
     public ExampleBoba saveExampleBoba(ExampleBoba boba) {
         ExampleBobaEntity entity = bobaMapper.toExampleBobaEntity(boba);
-        ExampleBobaEntity saved = exampleBobaRepository.save(entity);
-        return bobaMapper.toExampleBoba(saved);
+        exampleBobaRepository.insert(entity.getId(), entity.getName());
+        return boba;
     }
 
 }

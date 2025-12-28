@@ -15,7 +15,7 @@ scrape_configs:
   - job_name: 'boba'
     metrics_path: /actuator/prometheus
     static_configs:
-      - targets: ['boba:8082']
+      - targets: ['boba:7778']
 
   - job_name: 'unkn'
     static_configs:

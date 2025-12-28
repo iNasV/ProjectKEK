@@ -13,6 +13,7 @@
         <module>ProjectBIBA</module>
         <module>ProjectBOBA</module>
         <module>ProjectUnknown</module>
+        <module>ProjectAvro</module>
     </modules>
 
     <properties>

@@ -1,14 +1,14 @@
 iNas\generated\api\ExampleBobaApi.class
 iNas\model\response\HttpErrorResponse.class
 iNas\kafka\consumer\ExampleEventListener.class
-iNas\kafka\event\Event$Builder.class
 iNas\Runner.class
 iNas\entity\ExampleBobaEntity$ExampleBobaEntityBuilder.class
-iNas\kafka\event\Event.class
 iNas\kafka\handler\EventHandler.class
 iNas\generated\api\ApiUtil.class
 iNas\kafka\handler\ExampleEventHandler.class
 iNas\generated\model\ExampleBoba.class
+iNas\util\TraceUtil.class
+iNas\mapper\BobaMapperImpl.class
 iNas\service\impl\ExampleBobaServiceImpl.class
 iNas\service\ExampleBobaService.class
 iNas\constant\ErrorMessagesConstants.class

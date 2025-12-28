@@ -58,6 +58,14 @@ services:
     build:
       context: ./ProjectBIBA
       dockerfile: Dockerfile
+    environment:
+      OTEL_SERVICE_NAME: biba-service
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://alloy:4318/v1/traces
+      OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+      OTEL_METRICS_EXPORTER: none
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_LOGS_EXPORTER: none
+      OTEL_RESOURCE_ATTRIBUTES: service.version=1.0.0,deployment.environment=docker
     networks:
       - network1
     ports:
@@ -78,6 +86,14 @@ services:
     build:
       context: ./ProjectBOBA
       dockerfile: Dockerfile
+    environment:
+      OTEL_SERVICE_NAME: boba-service
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://alloy:4318/v1/traces
+      OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+      OTEL_METRICS_EXPORTER: none
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_LOGS_EXPORTER: none
+      OTEL_RESOURCE_ATTRIBUTES: service.version=1.0.0,deployment.environment=docker
     networks:
       - network1
     ports:
@@ -301,6 +317,58 @@ services:
     networks:
       - network1
 
+
+  loki:
+    image: grafana/loki:2.9.2
+    container_name: loki
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/loki-config.yaml
+    user: "root"
+    volumes:
+      - ./monitoring/loki/loki-config.yaml:/etc/loki/loki-config.yaml:ro
+      - loki_chunks:/tmp/loki/chunks
+      - loki_index:/tmp/loki/index
+      - loki_rules:/tmp/loki/rules
+    networks:
+      - network1
+
+  tempo:
+    image: grafana/tempo:2.4.1
+    container_name: tempo
+    command: [ "-config.file=/etc/tempo/tempo.yaml" ]
+    volumes:
+      - ./monitoring/tempo/tempo.yaml:/etc/tempo/tempo.yaml
+      - tempo_data:/var/tempo
+    ports:
+      - "3200:3200"
+    networks:
+      - network1
+
+  alloy:
+    image: grafana/alloy:latest
+    container_name: alloy
+    user: root
+    ports:
+      - "9080:9080"  # HTTP-интерфейс Alloy (по умолчанию)
+      - "4317:4317"  # OTLP gRPC (важно)
+      - "4318:4318"  # OTLP HTTP (если нужен)
+    volumes:
+      - ./monitoring/alloy/config.alloy:/etc/alloy/config.alloy:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - //var/run/docker.sock:/var/run/docker.sock
+#      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/log:/var/log:ro
+    environment:
+      GRAFANA_LOKI_URL: http://loki:3100/loki/api/v1/push  # локальный Loki
+    command:
+      - run
+      - --server.http.listen-addr=0.0.0.0:9080
+      - --storage.path=/var/lib/alloy/data
+      - /etc/alloy/config.alloy
+    networks:
+      - network1
+
 networks:
   network1:
     name: network1
@@ -317,3 +385,8 @@ volumes:
   zookeeper_data:
   zookeeper_log:
   schema_registry_data:
+  loki_data:
+  loki_chunks:
+  loki_index:
+  loki_rules:
+  tempo_data:

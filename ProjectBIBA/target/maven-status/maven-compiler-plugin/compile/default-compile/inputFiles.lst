@@ -5,7 +5,6 @@ C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\c
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\controller\impl\ExampleControllerImpl.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\entity\Example.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\exception\GlobalExceptionHandler.java
-C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\kafka\event\Event.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\kafka\producer\EventProducer.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\kafka\producer\ExampleEventProducer.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\model\response\HttpErrorResponse.java
@@ -15,4 +14,4 @@ C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\s
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\service\ExampleService.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\service\impl\ExampleScheduledServiceImpl.java
 C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\service\impl\ExampleServiceImpl.java
-C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\service\impl\TraceService.java
+C:\Users\TeeHa\IdeaProjects\ProjectKEK\ProjectBIBA\src\main\java\iNas\bibaProj\util\TraceUtil.java
